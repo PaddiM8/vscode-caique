@@ -1,0 +1,76 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "caique",
+	"patterns": [
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#entity"
+		},
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric.caique",
+					"match": "(?<!\\w)\\d+(\\.\\d+)?"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.caique",
+					"match": "\\b(fn|if|else|ret|use|class|init|let|new|pub)\\b"
+				}
+			]
+		},
+		"entity": {
+			"patterns": [
+				{
+					"name": "entity.name.type.caique",
+					"match": "((?<=new\\s)\\w+(?=\\(.+\\))|(?<=:\\s+)\\w+)"
+				},
+				{
+					"name": "entity.name.function.caique",
+					"match": "\\w+(?=\\(.+\\))"
+				}
+			]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.double-slash.caique",
+					"match": "//.+(\\n|\\0)"
+				},
+				{
+					"name": "comment.block.caique",
+					"begin": "/\\*",
+					"end": "\\*/"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.caique",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.caique",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.cq"
+}
