@@ -31,7 +31,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.caique",
-					"match": "\\b(fn|if|else|ret|use|class|init|let|new|pub)\\b"
+					"match": "\\b(fn|if|else|ret|use|class|init|let|new|pub|virtual|override|true|false)\\b"
 				}
 			]
 		},
