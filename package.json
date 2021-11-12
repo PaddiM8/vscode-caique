@@ -1,0 +1,33 @@
+{
+    "name": "caique",
+    "displayName": "Caique",
+    "description": "Caique language support",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.49.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "caique",
+                "aliases": [
+                    "Caique"
+                ],
+                "extensions": [
+                    ".cq"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "caique",
+                "scopeName": "source.cq",
+                "path": "./syntaxes/caique.tmLanguage.json"
+            }
+        ]
+    }
+}
